@@ -28,8 +28,8 @@ doc =
 
 app = express.createServer()
 
- app.get '/', (req, res) ->
-   res.send htdoc(doc)
+app.get '/', (req, res) ->
+  res.send htdoc(doc)
 
- app.listen 3000
+app.listen 3000
 ```
