@@ -25,6 +25,23 @@ onerror = (err)->
     process.stdout.write "#{red}#{err.stack}#{reset}\n"
     process.exit -1
 
+## Building ##
+
+build = (callback)->
+  log "Compiling CoffeeScript to JavaScript ...", green
+  exec "rm -rf lib && coffee -c -l -b -o lib src", callback
+task "build", "Compile CoffeeScript to JavaScript", -> build onerror
+
+task "watch", "Continously compile CoffeeScript to JavaScript", ->
+  cmd = spawn("coffee", ["-cw", "-o", "lib", "src"])
+  cmd.stdout.on "data", (data)-> process.stdout.write green + data + reset
+  cmd.on "error", onerror
+
+
+clean = (callback)->
+  exec "rm -rf lib build html man7", callback
+task "clean", "Remove temporary files and such", -> clean onerror
+
 ## Testing ##
 
 runTests = (callback)->
