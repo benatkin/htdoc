@@ -1,6 +1,6 @@
 vows = require 'vows'
 assert = require 'assert'
-htdoc = require '../lib/'
+htdoc = require '../'
 
 doc =
   html:

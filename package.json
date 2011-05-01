@@ -6,6 +6,10 @@
     "docco": "0.3.0",
     "vows": "0.5.8"
   },
+  "directories": {
+    "doc": "./doc",
+    "lib": "./lib"
+  },
   "keywords": [
     "browser",
     "document-driven",
@@ -15,5 +19,14 @@
     "JSON"
   ],
   "name": "htdoc",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://benatkin@github.com/benatkin/htdoc.git"
+  },
+  "scripts": {
+    "build": "cake build",
+    "test": "cake test"
+  },
   "version": "0.0.1"
 }
