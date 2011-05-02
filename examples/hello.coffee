@@ -1,5 +1,4 @@
-``` coffeescript
-htdoc = require 'htdoc'
+htdoc = require '../lib/'
 express = require 'express'
 
 doc =
@@ -32,4 +31,4 @@ app.get '/', (req, res) ->
   res.send htdoc.htdoc(doc)
 
 app.listen 3000
-```
+console.log 'listening on http://127.0.0.1:3000/'
