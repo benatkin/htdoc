@@ -2,9 +2,7 @@
   "author": "Ben Atkin <ben@benatkin.com> (http://benatkin.com/)",
   "description": "glue for html",
   "devDependencies": {
-    "coffee-script": ">= 1.0.1",
-    "docco": "0.3.0",
-    "vows": "0.5.8"
+    "vows": "0.6.1"
   },
   "directories": {
     "doc": "./doc",
@@ -25,8 +23,7 @@
     "url": "https://benatkin@github.com/benatkin/htdoc.git"
   },
   "scripts": {
-    "build": "cake build",
-    "test": "cake test"
+    "test": "vows"
   },
   "version": "0.0.1"
 }
